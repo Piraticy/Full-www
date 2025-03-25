@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Farming Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Smart Farming</h1>
+    </header>
+
+    <section id="crop-recommendation">
+        <h2>Crop Recommendation</h2>
+        <input type="text" id="soil-type" placeholder="Enter Soil Type">
+        <button onclick="getRecommendation()">Get Recommendation</button>
+        <p id="recommendation-result"></p>
+    </section>
+
+    <section id="weather">
+        <h2>Weather Forecast</h2>
+        <button onclick="fetchWeather()">Get Weather</button>
+        <p id="weather-result"></p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
