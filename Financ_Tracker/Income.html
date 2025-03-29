@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Income Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    h2 {
+      color: #28a745;
+    }
+    .btn {
+      padding: 10px;
+      background: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background: #218838;
+    }
+  </style>
+</head>
+<body>
+  <h2>📈 Income Tracker</h2>
+  <p>Manage your income here.</p>
+  <button class="btn" onclick="goBack()">⬅ Back</button>
+
+  <script>
+    function goBack() {
+      window.location.href = "<?= ScriptApp.getService().getUrl() ?>";
+    }
+  </script>
+</body>
+</html>

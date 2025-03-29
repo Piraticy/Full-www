@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Expense Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    h2 {
+      color: #007bff;
+    }
+    .btn {
+      padding: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h2>📉 Expense Tracker</h2>
+  <p>Manage your expenses here.</p>
+  <button class="btn" onclick="goBack()">⬅ Back</button>
+
+  <script>
+    function goBack() {
+      window.location.href = "<?= ScriptApp.getService().getUrl() ?>";
+    }
+  </script>
+</body>
+</html>
+

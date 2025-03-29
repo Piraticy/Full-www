@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f8f9fa;
+    }
+    .container {
+      text-align: center;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>💰 Finance Tracker</h2>
+    <button class="btn" onclick="openPage('Expense')">📉 Expense Tracker</button>
+    <button class="btn" onclick="openPage('Income')">📈 Income Tracker</button>
+  </div>
+
+  <script>
+    function openPage(page) {
+      google.script.run.withSuccessHandler(function(url) {
+        window.location.href = url;
+      }).navigateToPage(page);
+    }
+  </script>
+</body>
+</html>
